@@ -1,0 +1,47 @@
+<%- include('../partials/header') %>
+
+<div class="container">
+    <h2 style="text-decoration: underline;">Question Details</h2>
+    <div>
+        <div>
+            <label><b>Category: </b></label>
+            <%= quiz.category %>
+        </div>
+        <div>
+            <label><b>Question: </b></label>
+            <%= quiz.question %>
+        </div>
+        <div>
+            <label><b>Question #: </b></label>
+            <%= quiz.questionNo %>
+        </div>
+        <div>
+            <label><b>Answer A: </b></label>
+            <%= quiz.answerA %>
+        </div>
+        <div>
+            <label><b>Answer B: </b></label>
+            <%= quiz.answerB %>
+        </div>
+        <div>
+            <label><b>Answer C: </b></label>
+            <%= quiz.answerC %>
+        </div>
+        <div>
+            <label><b>Answer D: </b></label>
+            <%= quiz.answerD %>
+        </div>
+        <div>
+            <label><b>Correct Answer: </b></label>
+            <%= quiz.answerD %>
+        </div> 
+    </div>
+    <br>
+    <br>
+    <a type="button" href="/quizzes" class="btn btn-primary">Return</a>
+</div>
+
+<%- include('../partials/footer') %>
+
+
+

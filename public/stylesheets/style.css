@@ -1,0 +1,39 @@
+
+
+.titleText {
+  text-align: center;
+  margin-top: 3vmin;
+}
+
+.container {
+  margin-top: 3vmin;
+  margin-left: 35vmin;
+}
+
+.card {
+  width: 50vmin;
+}
+
+.card-img-top {
+  height: 30vmin;
+}
+
+.card-body > h4 {
+  text-decoration: underline;
+}
+
+.headerText {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  letter-spacing: 10px;
+  margin-right: 80vmin;
+  font-size: 5vmin;
+}
+
+#actionBtns {
+  display: flex;
+}
+
+#actionBtns > form > button {
+  margin-left: 1vmin;
+}

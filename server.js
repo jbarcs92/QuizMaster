@@ -10,6 +10,10 @@ require('./config/database');
 
 var homeRouter = require('./routes/home');
 var quizzesRouter = require('./routes/quizzes');
+var sportsRouter = require('./routes/sports');
+var historyRouter = require('./routes/history');
+var scienceRouter = require('./routes/science');
+var televisionRouter = require('./routes/television');
 
 var app = express();
 
@@ -27,6 +31,10 @@ app.use(methodOverride('_method'));
 
 app.use('/', homeRouter);
 app.use('/quizzes', quizzesRouter);
+app.use('/sports', sportsRouter);
+app.use('/history', historyRouter);
+app.use('/science', scienceRouter);
+app.use('/television', televisionRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

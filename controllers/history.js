@@ -8,6 +8,7 @@ module.exports = {
     questionfive
 }
 
+
 async function questionone(req,res) {
     try {
       const quizzes = await Quiz.find({});

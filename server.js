@@ -27,6 +27,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/public/images/', express.static('./public/images'));
+app.use('/public/javascripts/quiz.js', express.static('./public/javascripts/quiz.js'));
+
 app.use(methodOverride('_method'));
 
 app.use('/', homeRouter);

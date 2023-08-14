@@ -1,0 +1,40 @@
+<%- include('../partials/header') %>
+
+<% quizzes.forEach(function(q) { %>
+<% if (q.category === "Sports" && q.questionNo == 3) { %>
+<div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10 col-lg-7">
+            <div class="border">
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                        <h4>Sports Quiz</h4><span>(<%= q.questionNo %> of 5)</span></div>
+                </div>
+                <div class="question bg-white p-3 border-bottom">
+                    <div class="d-flex flex-row align-items-center question-title">
+                        <h3 class="text-danger">Q.</h3>
+                        <h5 class="mt-1 ml-2"><%= q.question %></h5>
+                    </div><div class="ans ml-2">
+<button type="button" id="correctAns" class="btn btn-outline-primary">A. <%= q.answerA %></button>
+</div><div class="ans ml-2">
+    <br>
+<button type="button" id="wrongAns" class="btn btn-outline-primary">B. <%= q.answerB %></button>
+</div><div class="ans ml-2">
+    <br>
+<button type="button" id="wrongAns" class="btn btn-outline-primary">C. <%= q.answerC %></button>
+</div><div class="ans ml-2">
+    <br>
+<button type="button" id="wrongAns" class="btn btn-outline-primary">D. <%= q.answerD %></button>
+</div></div>
+                <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+                    <a href="/sports/question2" class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;Previous</a>
+                    <a href="question4" class="btn btn-primary border-success align-items-center btn-success" type="button">Next<i class="fa fa-angle-right ml-2"></i></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<% } %>
+<% }) %>
+
+
+<%- include('../partials/footer') %>

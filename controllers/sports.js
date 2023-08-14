@@ -11,48 +11,48 @@ module.exports = {
 async function questionone(req,res) {
     try {
       const quizzes = await Quiz.find({});
-      res.render('history/question1', { quizzes });
+      res.render('sports/question1', { quizzes });
     } catch (err) {
       console.log(err);
-      res.render('history/question1', { errorMsg: err.message });
+      res.render('sports/question1', { errorMsg: err.message });
     }
 }
 
 async function questiontwo(req,res) {
     try {
       const quizzes = await Quiz.find({});
-      res.render('history/question2', { quizzes });
+      res.render('sports/question2', { quizzes });
     } catch (err) {
       console.log(err);
-      res.render('history/question2', { errorMsg: err.message });
+      res.render('sports/question2', { errorMsg: err.message });
     }
 }
 
 async function questionthree(req,res) {
     try {
       const quizzes = await Quiz.find({});
-      res.render('history/question3', { quizzes });
+      res.render('sports/question3', { quizzes });
     } catch (err) {
       console.log(err);
-      res.render('history/question3', { errorMsg: err.message });
+      res.render('sports/question3', { errorMsg: err.message });
     }
 }
 
 async function questionfour(req,res) {
     try {
       const quizzes = await Quiz.find({});
-      res.render('history/question4', { quizzes });
+      res.render('sports/question4', { quizzes });
     } catch (err) {
       console.log(err);
-      res.render('history/question4', { errorMsg: err.message });
+      res.render('sports/question4', { errorMsg: err.message });
     }
 }
 async function questionfive(req,res) {
     try {
       const quizzes = await Quiz.find({});
-      res.render('history/question5', { quizzes });
+      res.render('sports/question5', { quizzes });
     } catch (err) {
       console.log(err);
-      res.render('history/question5', { errorMsg: err.message });
+      res.render('sports/question5', { errorMsg: err.message });
     }
 }

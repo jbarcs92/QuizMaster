@@ -81,3 +81,13 @@ label.radio input:checked + span {
   outline: 0 !important;
   box-shadow: none !important;
 }
+
+#correctAns:focus {
+  background-color: green;
+  color: white;
+} 
+
+#wrongAns:focus {
+  background-color: red;
+  color: white;
+}

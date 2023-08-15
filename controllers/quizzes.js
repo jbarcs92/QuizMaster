@@ -12,8 +12,11 @@ module.exports = {
 
 async function index(req,res) {
     try {
-      const quizzes = await Quiz.find({});
-      res.render('quizzes/index', { quizzes });
+      const scienceQuizzes = await Quiz.find({category: "Science"});
+      const sportsQuizzes = await Quiz.find({category: "Sports"});
+      const historyQuizzes = await Quiz.find({category: "History"});
+      const televisionQuizzes = await Quiz.find({category: "Television"});
+      res.render('quizzes/index', { scienceQuizzes, sportsQuizzes, historyQuizzes, televisionQuizzes });
     } catch (err) {
       console.log(err);
       res.render('quizzes/index', { errorMsg: err.message });
@@ -74,3 +77,4 @@ async function deleteQuiz(req,res) {
         res.render('/quizzes', { errorMsg: err.message });
     }
 }
+

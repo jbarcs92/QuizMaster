@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
+const hbs = require('hbs');
+var helpers = require('./components/hbsHelpers');
 
 require('dotenv').config();
 require('./config/database');
@@ -19,7 +21,17 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'hbs');
+
+// const partialsPath = path.join(__dirname, 'views/partials');
+// hbs.registerPartials(partialsPath);
+
+hbs.registerPartials(path.join(__dirname, 'views/partials'), (err) => {});
+for (let helper in helpers) {
+  hbs.registerHelper(helper, helpers[helper]);
+}
+
+
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -1,30 +1,28 @@
-<%- include('../partials/header') %>
 
-<% quizzes.forEach(function(q) { %>
-<% if (q.category === "History" && q.questionNo == 5) { %>
+{{#each questionFive}}
 <div class="container mt-5">
     <div class="d-flex justify-content-center row">
         <div class="col-md-10 col-lg-7">
             <div class="border">
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row justify-content-between align-items-center mcq">
-                        <h4>History Quiz</h4><span>(<%= q.questionNo %> of 5)</span></div>
+                        <h4>History Quiz</h4><span>{{questionNo}} of 5</span></div>
                 </div>
                 <div class="question bg-white p-3 border-bottom">
                     <div class="d-flex flex-row align-items-center question-title">
                         <h3 class="text-danger">Q.</h3>
-                        <h5 class="mt-1 ml-2"><%= q.question %></h5>
+                        <h5 class="mt-1 ml-2">{{question}}</h5>
                     </div><div class="ans ml-2">
-<button type="button" id="wrongAns" class="btn btn-outline-primary">A. <%= q.answerA %></button>
+<button type="button" id="wrongAns" class="btn btn-outline-primary">A. {{answerA}}</button>
 </div><div class="ans ml-2">
     <br>
-<button type="button" id="wrongAns" class="btn btn-outline-primary">B. <%= q.answerB %></button>
+<button type="button" id="wrongAns" class="btn btn-outline-primary">B. {{answerB}}</button>
 </div><div class="ans ml-2">
     <br>
-<button type="button" id="wrongAns" class="btn btn-outline-primary">C. <%= q.answerC %></button>
+<button type="button" id="wrongAns" class="btn btn-outline-primary">C. {{answerC}}</button>
 </div><div class="ans ml-2">
     <br>
-<button type="button" id="correctAns" class="btn btn-outline-primary">D. <%= q.answerD %></button>
+<button type="button" id="correctAns" class="btn btn-outline-primary">D. {{answerD}}</button>
 </div></div>
                 <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
                     <a href="/history/question4" class="btn btn-primary d-flex align-items-center btn-danger" type="button"><i class="fa fa-angle-left mt-1 mr-1"></i>&nbsp;Previous</a>
@@ -33,8 +31,4 @@
         </div>
     </div>
 </div>
-<% } %>
-<% }) %>
-
-
-<%- include('../partials/footer') %>
+{{/each}}

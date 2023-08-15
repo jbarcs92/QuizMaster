@@ -1,5 +1,3 @@
-<%- include('../partials/header') %>
-
 <div class="container">
     <h2 style="text-decoration: underline;">Science Questions</h2>
     <table class="table table-striped">
@@ -11,29 +9,26 @@
             </tr>
         </thead>
         <tbody>
-            <% quizzes.sort((a, b) => a.questionNo - b.questionNo) %>
-            <% quizzes.forEach(function(q) { %>
-            <% if (q.category === "Science") { %>
+            {{#each scienceQuizzes}}
             <tr>
-                <td><%= q.questionNo %></td>
-                <td style="width: 850px;"><%= q.question %></td>
+                <td>{{questionNo}}</td>
+                <td style="width: 850px;">{{question}}</td>
                 <td id="actionBtns">
-                    <form action="/quizzes/<%= q.id %>" method="get">
+                    <form action="/quizzes/{{id}}" method="get">
                         <button type="submit" class="btn btn-outline-success">View</button>
                     </form>
-                    <form action="/quizzes/<%= q.id %>/edit" method="get">
+                    <form action="/quizzes/{{id}}/edit" method="get">
                         <button type="submit" class="btn btn-outline-warning">Edit</button>
                     </form>
                     <form
-                        action="/quizzes/<%= q.id %>?_method=DELETE"
+                        action="/quizzes/{{id}}?_method=DELETE"
                         method="POST"
                         class="delete-form">
                         <button type="submit" class="btn btn-outline-danger">Delete</button>
                     </form>
                 </td>
             </tr>
-            <% } %>
-            <% }) %>
+            {{/each}}
         </tbody>
     </table>
 
@@ -47,29 +42,26 @@
             </tr>
         </thead>
         <tbody>
-            <% quizzes.sort((a, b) => a.questionNo - b.questionNo) %>
-            <% quizzes.forEach(function(q) { %>
-            <% if (q.category === "Sports") { %>
+           {{#each sportsQuizzes}}
             <tr>
-                <td><%= q.questionNo %></td>
-                <td style="width: 850px;"><%= q.question %></td>
+                <td>{{questionNo}}</td>
+                <td style="width: 850px;">{{question}}</td>
                 <td id="actionBtns">
-                    <form action="/quizzes/<%= q.id %>" method="get">
+                    <form action="/quizzes/{{id}}" method="get">
                         <button type="submit" class="btn btn-outline-success">View</button>
                     </form>
-                    <form action="/quizzes/<%= q.id %>/edit" method="get">
+                    <form action="/quizzes/{{id}}/edit" method="get">
                         <button type="submit" class="btn btn-outline-warning">Edit</button>
                     </form>
                     <form
-                        action="/quizzes/<%= q.id %>?_method=DELETE"
+                        action="/quizzes/{{id}}?_method=DELETE"
                         method="POST"
                         class="delete-form">
                         <button type="submit" class="btn btn-outline-danger">Delete</button>
                     </form>
                 </td>
             </tr>
-            <% } %>
-            <% }) %>
+            {{/each}}
         </tbody>
     </table>
 
@@ -83,29 +75,26 @@
             </tr>
         </thead>
         <tbody>
-            <% quizzes.sort((a, b) => a.questionNo - b.questionNo) %>
-            <% quizzes.forEach(function(q) { %>
-            <% if (q.category === "History") { %>
+            {{#each historyQuizzes}}
             <tr>
-                <td><%= q.questionNo %></td>
-                <td style="width: 850px;"><%= q.question %></td>
+                <td>{{questionNo}}</td>
+                <td style="width: 850px;">{{question}}</td>
                 <td id="actionBtns">
-                    <form action="/quizzes/<%= q.id %>" method="get">
+                    <form action="/quizzes/{{id}}" method="get">
                         <button type="submit" class="btn btn-outline-success">View</button>
                     </form>
-                    <form action="/quizzes/<%= q.id %>/edit" method="get">
+                    <form action="/quizzes/{{id}}/edit" method="get">
                         <button type="submit" class="btn btn-outline-warning">Edit</button>
                     </form>
                     <form
-                        action="/quizzes/<%= q.id %>?_method=DELETE"
+                        action="/quizzes/{{id}}?_method=DELETE"
                         method="POST"
                         class="delete-form">
                         <button type="submit" class="btn btn-outline-danger">Delete</button>
                     </form>
                 </td>
             </tr>
-            <% } %>
-            <% }) %>
+            {{/each}}
         </tbody>
     </table>
 
@@ -119,34 +108,29 @@
             </tr>
         </thead>
         <tbody>
-            <% quizzes.sort((a, b) => a.questionNo - b.questionNo) %>
-            <% quizzes.forEach(function(q) { %>
-            <% if (q.category === "Television") { %>
+            {{#each televisionQuizzes}}
             <tr>
-                <td><%= q.questionNo %></td>
-                <td style="width: 850px;"><%= q.question %></td>
+                <td>{{questionNo}}</td>
+                <td style="width: 850px;">{{question}}</td>
                 <td id="actionBtns">
-                    <form action="/quizzes/<%= q.id %>" method="get">
+                    <form action="/quizzes/{{id}}" method="get">
                         <button type="submit" class="btn btn-outline-success">View</button>
                     </form>
-                    <form action="/quizzes/<%= q.id %>/edit" method="get">
+                    <form action="/quizzes/{{id}}/edit" method="get">
                         <button type="submit" class="btn btn-outline-warning">Edit</button>
                     </form>
                     <form
-                        action="/quizzes/<%= q.id %>?_method=DELETE"
+                        action="/quizzes/{{id}}?_method=DELETE"
                         method="POST"
                         class="delete-form">
                         <button type="submit" class="btn btn-outline-danger">Delete</button>
                     </form>
                 </td>
             </tr>
-            <% } %>
-            <% }) %>
+            {{/each}}
         </tbody>
     </table>
     <a href="/quizzes/new" class="btn btn-primary">Add Question</a>
     <br>
     <br>
 </div>
-
-<%- include('../partials/footer') %>

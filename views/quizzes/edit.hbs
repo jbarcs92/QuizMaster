@@ -1,13 +1,11 @@
-<%- include('../partials/header') %>
-
 <div class="container">
     <h2 style="text-decoration: underline;">Edit Question</h2>
     <br>
-    <form action="/quizzes/<%= quiz.id %>?_method=PUT" method="POST" id="editForm">
+    <form action="/quizzes/{{ quiz.id }}?_method=PUT" method="POST" id="editForm">
       <div class="form-group">
         <label for="category">Category:</label>
         <select name="category" style="width:13vmin;">
-            <option value="<%= quiz.category %>"><%= quiz.category %></option>
+            <option value="{{ quiz.category }}">{{ quiz.category }}</option>
             <option value="Science">Science</option>
             <option value="History">History</option>
             <option value="Sports">Sports</option>
@@ -16,12 +14,12 @@
       </div>
       <div class="form-group">
         <label for="question">Question:</label>
-        <input type="text" class="form-control" name="question" value="<%= quiz.question %>">
+        <input type="text" class="form-control" name="question" value="{{ quiz.question }}">
       </div>
       <div class="form-group">
         <label for="questionNo">Question #:</label>
         <select name="questionNo">
-            <option value="<%= quiz.questionNo %>"><%= quiz.questionNo %></option>
+            <option value="{{ quiz.questionNo }}">{{ quiz.questionNo }}</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -31,27 +29,25 @@
       </div>
       <div class="form-group">
         <label for="answerA">Answer A:</label>
-        <input type="text" class="form-control" name="answerA" value="<%= quiz.answerA %>">
+        <input type="text" class="form-control" name="answerA" value="{{ quiz.answerA }}">
       </div>
       <div class="form-group">
         <label for="answerB">Answer B:</label>
-        <input type="text" class="form-control" name="answerB" value="<%= quiz.answerB %>">
+        <input type="text" class="form-control" name="answerB" value="{{ quiz.answerB }}">
       </div>
       <div class="form-group">
         <label for="answerC">Answer C:</label>
-        <input type="text" class="form-control" name="answerC" value="<%= quiz.answerC %>">
+        <input type="text" class="form-control" name="answerC" value="{{ quiz.answerC }}">
       </div>
       <div class="form-group">
         <label for="answerD">Answer D:</label>
-        <input type="text" class="form-control" name="answerD" value="<%= quiz.answerD %>">
+        <input type="text" class="form-control" name="answerD" value="{{ quiz.answerD }}">
       </div>
       <div class="form-group">
         <label for="correctAnswer">Correct Answer:</label>
-        <input type="text" class="form-control" name="correctAnswer" value="<%= quiz.correctAnswer %>">
+        <input type="text" class="form-control" name="correctAnswer" value="{{ quiz.correctAnswer }}">
       </div>
       <br>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
-
-<%- include('../partials/footer') %>

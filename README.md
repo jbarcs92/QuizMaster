@@ -16,7 +16,7 @@ Quiz application that allows users to play a five question game. The quiz catego
 
 ## Project Link
 
-[TBD...](https://broken-waterfall-9542.fly.dev/)
+https://broken-waterfall-9542.fly.dev/
 
 ## Next Steps
 
